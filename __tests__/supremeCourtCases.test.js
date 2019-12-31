@@ -61,8 +61,8 @@ describe('supremeCourtCases route tests', () => {
         });
       });
   });
-  it('should be able to delete a court case by ID', () => {
-    const caseThree = CaseModel.create({
+  it('should be able to delete a court case by ID', async() => {
+    const caseThree = await CaseModel.create({
       caseId: '000001',
       caseName: 'third test'
     });
