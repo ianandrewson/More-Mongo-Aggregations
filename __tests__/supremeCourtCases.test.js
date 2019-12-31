@@ -1,9 +1,9 @@
 require('dotenv').config();
+const request = require('supertest');
+const app = require('../lib/app.js');
 const connect = require('../lib/utils/connect.js');
 const mongoose = require('mongoose');
 const CaseModel = require('../lib/models/SupremeCourtCases.js');
-const app = require('../lib/app.js');
-const request = require('supertest');
 
 describe('supremeCourtCases route tests', () => {
   beforeAll(() => {
@@ -17,7 +17,7 @@ describe('supremeCourtCases route tests', () => {
   });
   it('should be able to create a court case', () => {
     return request(app)
-      .post('api/v1/cases')
+      .post('/api/v1/cases')
       .send({
         caseId: '999999',
         caseName: 'test case'
@@ -45,10 +45,10 @@ describe('supremeCourtCases route tests', () => {
         });
       });
   });
-  it('should be able to get a court case by ID', () => {
-    const caseTwo = CaseModel.create({
+  it('should be able to get a court case by ID', async() => {
+    const caseTwo = await CaseModel.create({
       caseId: '000000',
-      caseName: 'another test case'
+      caseName: 'another test'
     });
     return request(app)
       .get(`/api/v1/cases/${caseTwo.id}`)
