@@ -39,7 +39,7 @@ describe('decoder test', () => {
       decisionDirection: 2,
       caseDisposition: 3,
     });
-  })
+  });
 
   afterAll(() => {
     return mongoose.connection.close();

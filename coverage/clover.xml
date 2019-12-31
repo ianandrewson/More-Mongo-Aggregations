@@ -1,22 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1577761265202" clover="3.2.0">
-  <project timestamp="1577761265202" name="All files">
-    <metrics statements="49" coveredstatements="39" conditionals="9" coveredconditionals="3" methods="16" coveredmethods="13" elements="74" coveredelements="55" complexity="0" loc="49" ncloc="49" packages="5" files="7" classes="7"/>
+<coverage generated="1577826287941" clover="3.2.0">
+  <project timestamp="1577826287942" name="All files">
+    <metrics statements="69" coveredstatements="59" conditionals="39" coveredconditionals="30" methods="17" coveredmethods="14" elements="125" coveredelements="103" complexity="0" loc="69" ncloc="69" packages="5" files="8" classes="8"/>
     <package name="lib">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="C:\Users\user\alchemy\bootcamp-three\week-three\labs\More-Mongo-Aggregations\lib\app.js">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
       </file>
     </package>
     <package name="lib.middleware">
-      <metrics statements="12" coveredstatements="3" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="31" coveredstatements="22" conditionals="36" coveredconditionals="27" methods="3" coveredmethods="1"/>
+      <file name="decoderMiddleware.js" path="C:\Users\user\alchemy\bootcamp-three\week-three\labs\More-Mongo-Aggregations\lib\middleware\decoderMiddleware.js">
+        <metrics statements="19" coveredstatements="19" conditionals="30" coveredconditionals="27" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="5" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+      </file>
       <file name="error.js" path="C:\Users\user\alchemy\bootcamp-three\week-three\labs\More-Mongo-Aggregations\lib\middleware\error.js">
         <metrics statements="8" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
@@ -84,7 +107,7 @@
       </file>
       <file name="decoder.js" path="C:\Users\user\alchemy\bootcamp-three\week-three\labs\More-Mongo-Aggregations\lib\utils\decoder.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
       </file>
     </package>
   </project>
