@@ -77,8 +77,8 @@ describe('supremeCourtCases route tests', () => {
         });
       });
   });
-  it('should be able to update a court case', () => {
-    const caseFour = CaseModel.create({
+  it('should be able to update a court case', async() => {
+    const caseFour = await CaseModel.create({
       caseId: '000002',
       caseName: 'fourth test'
     });
@@ -92,7 +92,7 @@ describe('supremeCourtCases route tests', () => {
           _id: expect.any(String),
           caseId: 'NEW CASE ID',
           caseName: 'fourth test',
-          _v: 0
+          __v: 0
         });
       });
   });
