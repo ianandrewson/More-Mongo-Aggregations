@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">91.18% </span>
+        <span class="strong">91.43% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>31/34</span>
+        <span class='fraction'>32/35</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">90% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>19/19</span>
+        <span class='fraction'>20/20</span>
       </div>
     </div>
     <p class="quiet">
@@ -69,25 +69,29 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -96,21 +100,23 @@
 const mung = require('express-mung');
 &nbsp;
 function decode(body) {
-  if(body.petitioner) body.petitioner = decoder.partiesDecoder[Number(body.petitioner)];
-  <span class="missing-if-branch" title="if path not taken" >I</span>if(body.peitionerState) <span class="cstat-no" title="statement not covered" >body.peitionerState = decoder.stateDecoder[Number(body.petitionerState)];</span>
-  if(body.respondent) body.respondent = decoder.partiesDecoder[Number(body.respondent)];
-  <span class="missing-if-branch" title="if path not taken" >I</span>if(body.respondentState) <span class="cstat-no" title="statement not covered" >body.respondentState = decoder.stateDecoder[Number(body.respondentState)];</span>
-  if(body.caseSource) body.caseSource = decoder.caseSourceDecoder[Number(body.caseSource)];
-  if(body.certReason) body.certReason = decoder.certReasonDecoder[Number(body.certReason)];
-  if(body.issue) body.issue = decoder.issueDecoder[Number(body.issue)];
-  if(body.issueArea) body.issueArea = decoder.issueAreaDecoder[Number(body.issueArea)];
-  if(body.lawSupp) body.lawSupp = decoder.lawSuppDecoder[Number(body.lawSupp)];
-  if(body.declarationUncon) body.declarationUncon = decoder.declarationUnconDecoder[Number(body.declarationUncon)];
-  if(body.partyWinning) body.partyWinning = decoder.partyWinningDecoder[Number(body.partyWinning)];
-  if(body.precedentAlteration) body.precedentAlteration = decoder.precedentAlterationDecoder[Number(body.precedentAlteration)];
-  <span class="missing-if-branch" title="if path not taken" >I</span>if(body.adminAction) <span class="cstat-no" title="statement not covered" >body.adminAction = decoder.adminActionDecoder[Number(body.adminAction)];</span>
-  if(body.decisionDirection) body.decisionDirection = decoder.decisionDirectionDecoder[Number(body.decisionDirection)];
-  if(body.caseDisposition) body.caseDisposition = decoder.caseDispositionDecoder[Number(body.caseDisposition)];
+  body.forEach(courtCase =&gt; {
+    if(courtCase.petitioner) courtCase.petitioner = decoder.partiesDecoder[Number(courtCase.petitioner)];
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(courtCase.peitionerState) <span class="cstat-no" title="statement not covered" >courtCase.peitionerState = decoder.stateDecoder[Number(courtCase.petitionerState)];</span>
+    if(courtCase.respondent) courtCase.respondent = decoder.partiesDecoder[Number(courtCase.respondent)];
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(courtCase.respondentState) <span class="cstat-no" title="statement not covered" >courtCase.respondentState = decoder.stateDecoder[Number(courtCase.respondentState)];</span>
+    if(courtCase.caseSource) courtCase.caseSource = decoder.caseSourceDecoder[Number(courtCase.caseSource)];
+    if(courtCase.certReason) courtCase.certReason = decoder.certReasonDecoder[Number(courtCase.certReason)];
+    if(courtCase.issue) courtCase.issue = decoder.issueDecoder[Number(courtCase.issue)];
+    if(courtCase.issueArea) courtCase.issueArea = decoder.issueAreaDecoder[Number(courtCase.issueArea)];
+    if(courtCase.lawSupp) courtCase.lawSupp = decoder.lawSuppDecoder[Number(courtCase.lawSupp)];
+    if(courtCase.declarationUncon) courtCase.declarationUncon = decoder.declarationUnconDecoder[Number(courtCase.declarationUncon)];
+    if(courtCase.partyWinning) courtCase.partyWinning = decoder.partyWinningDecoder[Number(courtCase.partyWinning)];
+    if(courtCase.precedentAlteration) courtCase.precedentAlteration = decoder.precedentAlterationDecoder[Number(courtCase.precedentAlteration)];
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(courtCase.adminAction) <span class="cstat-no" title="statement not covered" >courtCase.adminAction = decoder.adminActionDecoder[Number(courtCase.adminAction)];</span>
+    if(courtCase.decisionDirection) courtCase.decisionDirection = decoder.decisionDirectionDecoder[Number(courtCase.decisionDirection)];
+    if(courtCase.caseDisposition) courtCase.caseDisposition = decoder.caseDispositionDecoder[Number(courtCase.caseDisposition)];
+  });
   return body;
 }
 &nbsp;
@@ -121,7 +127,7 @@ module.exports = mung.json(decode);
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Dec 31 2019 15:35:15 GMT-0800 (Pacific Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jan 01 2020 11:43:02 GMT-0800 (Pacific Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

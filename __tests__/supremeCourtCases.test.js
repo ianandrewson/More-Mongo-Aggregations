@@ -23,12 +23,12 @@ describe('supremeCourtCases route tests', () => {
         caseName: 'test case'
       })
       .then(res => {
-        expect(res.body).toEqual({
+        expect(res.body).toEqual([{
           _id: expect.any(String),
           caseId: '999999',
           caseName: 'test case',
           __v: 0
-        });
+        }]);
       });
   });
   it('should be able to get all cases', async() => {
@@ -53,12 +53,12 @@ describe('supremeCourtCases route tests', () => {
     return request(app)
       .get(`/api/v1/cases/${caseTwo.id}`)
       .then(res => {
-        expect(res.body).toEqual({
+        expect(res.body).toEqual([{
           _id: expect.any(String),
           caseId: '000000',
           caseName: 'another test',
           __v: 0
-        });
+        }]);
       });
   });
   it('should be able to delete a court case by ID', async() => {
@@ -69,12 +69,12 @@ describe('supremeCourtCases route tests', () => {
     return request(app)
       .delete(`/api/v1/cases/${caseThree.id}`)
       .then(res => {
-        expect(res.body).toEqual({
+        expect(res.body).toEqual([{
           _id: expect.any(String),
           caseId: '000001',
           caseName: 'third test',
           __v: 0
-        });
+        }]);
       });
   });
   it('should be able to update a court case', async() => {
@@ -88,12 +88,12 @@ describe('supremeCourtCases route tests', () => {
         caseId: 'NEW CASE ID',
       })
       .then(res => {
-        expect(res.body).toEqual({
+        expect(res.body).toEqual([{
           _id: expect.any(String),
           caseId: 'NEW CASE ID',
           caseName: 'fourth test',
           __v: 0
-        });
+        }]);
       });
   });
 });

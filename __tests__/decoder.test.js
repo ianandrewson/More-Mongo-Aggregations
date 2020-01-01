@@ -49,7 +49,7 @@ describe('decoder test', () => {
     return request(app)
       .get(`/api/v1/cases/${courtCase.id}`)
       .then(res => {
-        expect(res.body).toEqual({
+        expect(res.body).toEqual([{
           _id: expect.any(String),
           caseId:'1946-001',
           caseName:'HALLIBURTON OIL WELL CEMENTING CO. v. WALKER et al., DOING BUSINESS AS...',
@@ -72,7 +72,7 @@ describe('decoder test', () => {
           decisionDirection: decoder.decisionDirectionDecoder[courtCase.decisionDirection],
           caseDisposition: decoder.caseDispositionDecoder[courtCase.caseDisposition],
           __v: 0
-        });
+        }]);
       });
   });
 });
