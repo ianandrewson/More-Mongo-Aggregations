@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1577826287941" clover="3.2.0">
-  <project timestamp="1577826287942" name="All files">
-    <metrics statements="69" coveredstatements="59" conditionals="39" coveredconditionals="30" methods="17" coveredmethods="14" elements="125" coveredelements="103" complexity="0" loc="69" ncloc="69" packages="5" files="8" classes="8"/>
+<coverage generated="1577835315066" clover="3.2.0">
+  <project timestamp="1577835315066" name="All files">
+    <metrics statements="73" coveredstatements="60" conditionals="39" coveredconditionals="30" methods="20" coveredmethods="14" elements="132" coveredelements="104" complexity="0" loc="73" ncloc="73" packages="5" files="8" classes="8"/>
     <package name="lib">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="C:\Users\user\alchemy\bootcamp-three\week-three\labs\More-Mongo-Aggregations\lib\app.js">
@@ -60,18 +60,20 @@
       </file>
     </package>
     <package name="lib.models">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="SupremeCourtCases.js" path="C:\Users\user\alchemy\bootcamp-three\week-three\labs\More-Mongo-Aggregations\lib\models\SupremeCourtCases.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="33" count="2" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
       </file>
     </package>
     <package name="lib.routes">
-      <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="10"/>
+      <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="12" coveredmethods="10"/>
       <file name="supremeCourtCases.js" path="C:\Users\user\alchemy\bootcamp-three\week-three\labs\More-Mongo-Aggregations\lib\routes\supremeCourtCases.js">
-        <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="10"/>
+        <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="12" coveredmethods="10"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -86,6 +88,8 @@
         <line num="32" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
       </file>
     </package>
     <package name="lib.utils">
